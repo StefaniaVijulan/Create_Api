@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://createapi1:' +
 process.env.MONGO_ATLAS_PW +
 '@node-rest-shop.k5ykm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
-
+mongoose.Promise = global.Promise;
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
