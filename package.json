@@ -15,8 +15,10 @@
   "author": "Stefania Vijulan",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "save": "^2.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
