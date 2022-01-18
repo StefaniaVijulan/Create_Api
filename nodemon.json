@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "cnet2015"
+        "MONGO_ATLAS_PW": "cnet2015",
+        "JWT_KEY": "secret"
     }
 }

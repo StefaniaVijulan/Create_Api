@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/user');
 
 mongoose.connect('mongodb+srv://createapi1:' +
 process.env.MONGO_ATLAS_PW +
@@ -14,10 +15,10 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 app.use(morgan("dev"));
-app.use('uploads',express.static('uploads'))
+app.use('/uploads',express.static('uploads'))
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
+app.use("/user",userRoutes)
 //we set the api to can be used by anyone 
 //(this is possible because of *)
 app.use((req, res, next)=>{
